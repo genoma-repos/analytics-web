@@ -7,8 +7,10 @@ import type {
   UsageRow,
 } from '../types';
 
+const URL = 'https://analytics-server-flax.vercel.app';
+
 const fetchJson = async <T>(path: string, token: string): Promise<T> => {
-  const response = await fetch(path, {
+  const response = await fetch(URL + path, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
